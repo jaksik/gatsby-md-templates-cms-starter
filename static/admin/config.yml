@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: master
 
 media_folder: static/assets
@@ -11,11 +11,13 @@ collections:
     files:
       - file: "src/pages/faq/index.md"
         label: "FAQ Page"
-        name: "index"
+        name: "faq"
         fields:
+          - { name: template, label: Template Key, widget: hidden, default: "blog-post"}
           - { name: body, label: Body, widget: markdown }
       - file: "src/pages/testimonials/index.md"
         label: "Testimonials Page"
-        name: "index"
+        name: "testimonials"
         fields:
+          - { name: template, label: Template Key, widget: hidden, default: "blog-post"}
           - { name: body, label: Body, widget: markdown }

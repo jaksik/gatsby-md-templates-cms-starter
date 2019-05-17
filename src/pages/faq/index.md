@@ -1,5 +1,4 @@
 ---
 template: blog-post
-title: faq
 ---
-Hello
+Hello I'm writing this from the CMS

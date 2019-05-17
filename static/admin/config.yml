@@ -20,4 +20,12 @@ collections:
         name: "testimonials"
         fields:
           - { name: template, label: Template Key, widget: hidden, default: "blog-post"}
-          - { name: body, label: Body, widget: markdown }
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - file: "src/pages/about/index.md"
+        label: "Frequently Asked Questions Page"
+        name: "Frequently AQ"
+        fields:
+          - {label: "Question", name: "question", widget: "string"}
+
+          - {label: "Question", name: "question", widget: "string"}
+          - {label: "Answer", name: "answer", widget: "string"}

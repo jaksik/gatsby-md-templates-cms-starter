@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: static/assets
-public_folder: assets
+public_folder: /img
 
 collections:
   - name: "pages"

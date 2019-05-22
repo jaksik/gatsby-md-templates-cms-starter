@@ -1,0 +1,27 @@
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    max-width: 650px;
+}
+
+input, select, label, textarea {
+    max-width: 100%;
+    width: 90%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+input, select {
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+}
+
+#submit {
+    text-align: center;
+}

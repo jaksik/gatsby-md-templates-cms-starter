@@ -2,30 +2,45 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/assets
+media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/faq/index.md"
-        label: "FAQ Page"
-        name: "faq"
-        fields:
-          - { name: template, label: Template Key, widget: hidden, default: "blog-post"}
-          - { name: body, label: Body, widget: markdown }
-      - file: "src/pages/testimonials/index.md"
-        label: "Testimonials Page"
-        name: "testimonials"
-        fields:
-          - { name: template, label: Template Key, widget: hidden, default: "blog-post"}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-      - file: "src/pages/about/index.md"
-        label: "Frequently Asked Questions Page"
-        name: "Frequently AQ"
-        fields:
-          - {label: "Question", name: "question", widget: "string"}
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
 
-          - {label: "Question", name: "question", widget: "string"}
-          - {label: "Answer", name: "answer", widget: "string"}
+  - name: "events"
+    label: "Events"
+    folder: "src/pages/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "class-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+ 
+  - name: "products"
+    label: "Products"
+    folder: "src/pages/store"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "class-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}

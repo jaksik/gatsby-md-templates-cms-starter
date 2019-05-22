@@ -11,11 +11,12 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark {
           edges {
             node {
+              id
               fields {
                 slug
               }
               frontmatter {
-                  template
+                  templateKey
               }
             }
           }
@@ -24,12 +25,14 @@ exports.createPages = ({ graphql, actions }) => {
     `
   ).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const id = node.id
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/${String(node.frontmatter.template)}.js`),
+          component: path.resolve(`./src/templates/${String(node.frontmatter.templateKey)}.js`),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
+            id,
             slug: node.fields.slug,
           },
         })

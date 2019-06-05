@@ -29,10 +29,6 @@ img{
     background-color: whitesmoke;
 }
 
-.blog-roll {
-
-}
-
-.class-roll {
-    
+.row {
+    display: flex;  
 }

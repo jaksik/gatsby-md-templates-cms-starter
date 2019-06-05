@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PreviewRoll from '../components/preview-roll'
+import Animate from "../components/animate"
 import "./style.css"
 
 const IndexPage = ({ data }) => {
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Animate/>
       <h2>Blog</h2>
       <PreviewRoll
         itemWidth="50%"

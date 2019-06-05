@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Markdown Templates CMS Starter`,
-    description: `Set up to allow users to make different js templates for categorically organized mark down files right out of the box. Also categorically query your markdowns all within one query.`,
+    title: `Colorado Mountain Guides`,
+    description: `Book a Colorado Mountain Guide.`,
     author: `@gatsbyjs`,
+    logo: `blue`,
+    colorOne: `forestgreen`,
+    colorTwo: `black`,
+    coverImg: `hello`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,

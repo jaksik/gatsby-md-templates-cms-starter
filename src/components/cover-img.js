@@ -7,7 +7,7 @@ import BackgroundImage from 'gatsby-background-image'
 const BackgroundSection = ({ className }) => (
     <StaticQuery query={graphql`
       query {
-        desktop: file(relativePath: { eq: "mountains.jpg" }) {
+        desktop: file(relativePath: { eq: "gatsby-astronaut.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
@@ -35,7 +35,7 @@ const BackgroundSection = ({ className }) => (
 )
 
 const StyledBackgroundSection = styled(BackgroundSection)`
-  min-height: 100vh;
+  min-height: 200vh;
   width: 100%;
   background-position: top center;
   background-repeat: repeat-y;

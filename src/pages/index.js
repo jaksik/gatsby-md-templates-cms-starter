@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Section from "../components/section"
 import SEO from "../components/seo"
 import PreviewRoll from '../components/preview-roll'
-import Animate from "../components/animate"
+import CoverImg from "../components/cover-img"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
 
 const IndexPage = ({ data }) => {
@@ -14,27 +16,32 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Animate/>
-      <h2>Blog</h2>
-      <PreviewRoll
-        itemWidth="50%"
-        postData={blog}
-      />
+      <CoverImg />
 
-      <h2>Classes</h2>
-      <p>Attend one of our classes or events.</p>
-      <PreviewRoll
-        itemWidth="100%"
-        postData={events}
-      />
+      <Section>
+        <PreviewRoll
+          title="Blog"
+          description=""
+          itemWidth="4"
+          postData={blog}
+        />
 
-      <h2>store</h2>
-      <p>Check out our store of useful components and code snippets</p>
-      <PreviewRoll
-        itemWidth="50%"
-        postData={store}
-      // totalCount={props.totalCount}
-      />
+        <PreviewRoll
+          title="Events"
+          description="Attend one of our events."
+          itemWidth="12"
+          postData={events}
+        />
+
+        <PreviewRoll
+          title="Products"
+          description="Check out our store of useful components and code snippets."
+          itemWidth="6"
+          postData={store}
+        // totalCount={props.totalCount}
+        />
+      </Section>
+
 
     </Layout>
   )

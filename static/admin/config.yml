@@ -6,6 +6,16 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files: 
+      - file: "/admin.md"
+        label: "Admin"
+        name: "admin"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "class-post"}
+          - {label: "Title", name: "title", widget: "string"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"

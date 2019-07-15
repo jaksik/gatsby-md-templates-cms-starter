@@ -31,11 +31,20 @@ img{
 }
 
 .preview-roll {
-    margin: 20px auto;
+    margin: 0 auto;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px 0px;
+    bottom: -100px;
 }
 
 .row {
     display: flex;  
+}
+
+.text-class {
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+.page {
+    min-height: 80vh;
 }

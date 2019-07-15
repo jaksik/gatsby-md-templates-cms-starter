@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Section from "../components/section"
 import SEO from "../components/seo"
 import PreviewRoll from '../components/preview-roll'
 import CoverImg from "../components/cover-img"
@@ -16,9 +15,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <CoverImg />
+      <CoverImg 
+        img="mountains.JPG"
+      />
 
-      <Section>
+      <div className="container">
         <PreviewRoll
           title="Blog"
           description=""
@@ -40,7 +41,7 @@ const IndexPage = ({ data }) => {
           postData={store}
         // totalCount={props.totalCount}
         />
-      </Section>
+      </div>
 
 
     </Layout>

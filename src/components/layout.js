@@ -19,7 +19,6 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
-            colorOne
           }
         }
       }
@@ -36,8 +35,8 @@ const Layout = ({ children }) => (
           <main>{children}</main>
           <footer
             style={{
-              backgroundColor: data.site.siteMetadata.colorOne,
-              width: `100%`
+              width: `100%`,
+              textAlign:`center`,
             }}>
             © {new Date().getFullYear()}, Built by
             {` `}

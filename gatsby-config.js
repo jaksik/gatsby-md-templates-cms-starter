@@ -1,12 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Colorado Mountain Guides`,
-    description: `Book a Colorado Mountain Guide.`,
+    title: `Gatsby Business Starter`,
+    description: `A simple Gatsby starter aimed at helping a local business get online.`,
     author: `@gatsbyjs`,
-    logo: `blue`,
-    colorOne: `forestgreen`,
-    colorTwo: `black`,
-    coverImg: `hello`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,

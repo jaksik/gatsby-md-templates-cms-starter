@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Section from "../components/section"
 
 
 export default ({ data }) => {
@@ -9,15 +8,10 @@ export default ({ data }) => {
  
   return (
     <Layout>
-      <Section>
+      <div className="container page">
         <h1>{post.frontmatter.title}</h1>
-        <h3>Description:</h3>
-        <h4>Demo link for the code being explained in this post:</h4>
-        <h4>GitHub link to library repo of source code for the code discussed in this post:</h4>
-        <h4>Youtube video link to video that walks through this post:</h4>
-        
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Section>
+      </div>
     </Layout>
   )
 }
@@ -29,19 +23,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-      
       }
    }
   }
 `
-
-//   featuredimage {
-      //     childImageSharp {
-      //       resize(width: 1500, height: 1500) {
-      //         src
-      //       }
-      //       fluid(maxWidth: 786) {
-      //         ...GatsbyImageSharpFluid
-      //       }
-      //     }
-      //  }
